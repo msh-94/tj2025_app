@@ -1,8 +1,11 @@
 // lib/example/day04/main.dart
 
 import 'package:flutter/material.dart';
+import 'package:tj2025_app/example/day04/pages/DetailPage.dart';
 import 'package:tj2025_app/example/day04/pages/HomePage.dart';
+import 'package:tj2025_app/example/day04/pages/InfoPage.dart';
 import 'package:tj2025_app/example/day04/pages/MainPage.dart';
+import 'package:tj2025_app/example/day04/pages/SettingPage.dart';
 
 void main(){ // 프로그램 실행 시작점
   runApp( MyApp() ); // runApp() 플러터 앱을 시작하는 함수
@@ -20,6 +23,9 @@ class MyApp extends StatelessWidget{ // 앱 전체의 루트 위젯 정의
       routes: { // 경로 와 해당 위젯을 연결하는 MAP 형식
         "/" : (context) => MainPage(),
         "/home" : (context) => HomePage() , // 다른 파일의 위젯 import
+        "/info" : (context) => InfoPage() ,
+        "/setting" : (context) => SettingPage() ,
+        "/detail" : (context) => DetailPage() ,
       },
     );
   }
