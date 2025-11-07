@@ -9,13 +9,13 @@ class MainPage extends StatefulWidget{
 
 class MainPageState extends State<MainPage>{
   int currentPageIndex = 0; // 현재 화면에 보이는 페이지 (인덱스) 번호
-  dynamic page = [ // vs List<Widget> pages = [];
+  dynamic pages = [ // vs List<Widget> pages = [];
     HomePage() , // 인덱스 0 -> 홈 페이지
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: HomePage(),
+      body: IndexedStack( index: currentPageIndex, children: pages,),
       bottomNavigationBar: BottomNavigationBar(
           // 현재 선택 된 버튼 번호 설정
         currentIndex: currentPageIndex,
